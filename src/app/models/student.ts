@@ -6,6 +6,7 @@ export interface IStudent {
       nazwisko: String;
       dataUrodzenia: Date;
       pesel: number;
+   
     }
     
   export class Student implements IStudent {
