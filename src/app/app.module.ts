@@ -8,19 +8,24 @@ import { DodawanieKsiazkaComponent } from './dodawanie-ksiazka/dodawanie-ksiazka
 import { DodawanieStudentComponent } from './dodawanie-student/dodawanie-student.component';
 import { WypozyczeniaComponent } from './wypozyczenia/wypozyczenia.component';
 import { UsuwanieKsiazkaComponent } from './usuwanie-ksiazka/usuwanie-ksiazka.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
+
+
   declarations: [
     AppComponent,
     DodawanieAutorComponent,
-    
+
     DodawanieKsiazkaComponent,
-    
+
     DodawanieStudentComponent,
-    
+
     WypozyczeniaComponent,
-    
-    UsuwanieKsiazkaComponent
+
+    UsuwanieKsiazkaComponent,
+
+    HomeComponent
   ],
   imports: [
     FormsModule,
