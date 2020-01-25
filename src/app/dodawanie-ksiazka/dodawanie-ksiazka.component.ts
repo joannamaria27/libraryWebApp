@@ -1,8 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-//import { KsiazkaZAutorem } from '../models/ksiazkaZAutorem';
 import { Autor } from '../models/autor';
 import { Ksiazka } from '../models/ksiazka';
-import fetch from 'isomorphic-unfetch';
+
 
 
 @Component({
@@ -15,8 +14,8 @@ export class DodawanieKsiazkaComponent implements OnInit {
   nowaKsiazka: Ksiazka = new Ksiazka();
   autorzy: Autor[] = new Array<Autor>();
 
-  constructor() { 
-    
+  constructor() {
+
   }
 
   ngOnInit() {
@@ -43,7 +42,7 @@ export class DodawanieKsiazkaComponent implements OnInit {
         console.log("Successful " + data);
       })
     })
-    
+
   }
 
 }
