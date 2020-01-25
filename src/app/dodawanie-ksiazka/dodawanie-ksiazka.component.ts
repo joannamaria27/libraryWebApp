@@ -29,6 +29,10 @@ export class DodawanieKsiazkaComponent implements OnInit {
 
   dodawanieKsiazki() {
     this.dodajKsiazke.emit(this.nowaKsiazka);
+    console.log("nowaKsiazka");
+    console.log(this.nowaKsiazka);
+    console.log("dodajKsiazke");
+    console.log(this.dodajKsiazke)  ;
 
     fetch("http://localhost:3000/ksiazka/", {
       method: "post",

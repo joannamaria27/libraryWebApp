@@ -6,14 +6,12 @@ liczbaStron:
 <input [(ngModel)]="nowaKsiazka.liczbaStron"/>
 isbn:
 <input [(ngModel)]="nowaKsiazka.isbn"/>
-liczbastron:
-<input [(ngModel)]="nowaKsiazka.liczbaStron"/>
 dataWydania:
 <input [(ngModel)]="nowaKsiazka.dataWydania"/>
 autor:
 <select [(ngModel)]="nowaKsiazka.idAutora" >
     <option >hallo</option>
-    <option *ngFor="let autor of autorzy" [value]="autor">{{autor.imie + ' ' + autor.nazwisko}}</option>
+    <option *ngFor="let autor of autorzy" [value]="autor.id">{{autor.imie + ' ' + autor.nazwisko}}</option>
   </select>
 <!-- <input [(ngModel)]="nowaKsiazka.autor"/> -->
 
@@ -33,4 +31,3 @@ autor:
 
 <pre>Month: {{ date.month }}.{{ date.year }}</pre>
 <pre>Model: {{ model | json }}</pre> -->
-

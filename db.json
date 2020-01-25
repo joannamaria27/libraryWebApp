@@ -45,6 +45,9 @@
       "liczbaStron": 1500,
       "dataWydania": "2002-02-01",
       "autorId": 2
+    },
+    {
+      "id": 3
     }
   ],
   "student": [
@@ -71,8 +74,7 @@
       "nazwisko": "Nowak",
       "dataUrodzenia": "1996-05-25",
       "pesel": 96052500000
-    }
-    ,
+    },
     {
       "imie": "Henryk",
       "nazwisko": "Sienkiewiczowski",
