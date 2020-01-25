@@ -2,23 +2,82 @@
   "autor": [
     {
       "id": 0,
-      "imie": "Asia",
-      "nazwisko": "rodo"
+      "imie": "Henryk",
+      "nazwisko": "Sienkiewicz"
     },
     {
-      "imie": "Asia",
-      "nazwisko": "Klimowiczczcz",
-      "id": 1
+      "id": 1,
+      "imie": "Bolesław",
+      "nazwisko": "Prus"
+    },
+    {
+      "id": 2,
+      "imie": "Andrzej",
+      "nazwisko": "Sapkowski"
+    },
+    {
+      "id": 3,
+      "imie": "Ignacy",
+      "nazwisko": "Krasicki"
     }
   ],
   "ksiazka": [
     {
       "id": 0,
-      "tytul": "assd",
-      "liczbaStron": 4,
-      "isbn": 2,
-      "dataWydania": "2020-01-28",
+      "isbn": 1234567890001,
+      "tytul": "Dziady",
+      "liczbaStron": 440,
+      "dataWydania": "2001-01-01",
       "autorId": 0
+    },
+    {
+      "id": 1,
+      "isbn": 134567890002,
+      "tytul": "Ogniem i Mieczem",
+      "liczbaStron": 12,
+      "dataWydania": "2001-01-02",
+      "autorId": 1
+    },
+    {
+      "id": 2,
+      "isbn": 1234567890003,
+      "tytul": "Powieść historyczna",
+      "liczbaStron": 1500,
+      "dataWydania": "2002-02-01",
+      "autorId": 2
+    }
+  ],
+  "student": [
+    {
+      "imie": "Adam",
+      "nazwisko": "Ewowski",
+      "dataUrodzenia": "1999-01-21",
+      "pesel": 99012100000
+    },
+    {
+      "imie": "Ewa",
+      "nazwisko": "Adamowska",
+      "dataUrodzenia": "1999-02-22",
+      "pesel": 99022200000
+    },
+    {
+      "imie": "Adrian",
+      "nazwisko": "Kowalski",
+      "dataUrodzenia": "1997-04-24",
+      "pesel": 97042400000
+    },
+    {
+      "imie": "Adianna",
+      "nazwisko": "Nowak",
+      "dataUrodzenia": "1996-05-25",
+      "pesel": 96052500000
+    }
+    ,
+    {
+      "imie": "Henryk",
+      "nazwisko": "Sienkiewiczowski",
+      "dataUrodzenia": "1995-06-26",
+      "pesel": 95062600000
     }
   ]
 }
