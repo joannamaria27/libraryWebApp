@@ -1,0 +1,24 @@
+{
+  "autor": [
+    {
+      "id": 0,
+      "imie": "Asia",
+      "nazwisko": "rodo"
+    },
+    {
+      "imie": "Asia",
+      "nazwisko": "Klimowiczczcz",
+      "id": 1
+    }
+  ],
+  "ksiazka": [
+    {
+      "id": 0,
+      "tytul": "assd",
+      "liczbaStron": 4,
+      "isbn": 2,
+      "dataWydania": "2020-01-28",
+      "autorId": 0
+    }
+  ]
+}
