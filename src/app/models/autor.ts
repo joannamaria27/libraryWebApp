@@ -1,16 +1,16 @@
 export interface IAutor {
-    id: number;
+    autorId: number;
     imie: String;
     nazwisko: String;
   }
 
   export class Autor implements IAutor {
-    id: number;
+    autorId: number;
     imie: String;
     nazwisko: String;
 
     constructor(obj = {} as Autor) {
-        this.id = obj.id;
+        this.autorId = obj.autorId;
         this.imie = obj.imie;
         this.nazwisko = obj.nazwisko;
         

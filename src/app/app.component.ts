@@ -18,27 +18,12 @@ export class AppComponent {
   studenci: Student[]=[];
   wybranyStudent: Student;
 
-  constructor() {
-
+  constructor(private KsiazkaService: KsiazkaService) {
+    this.ksiazki = KsiazkaService.getKsiazka();
+    this.autorzy = KsiazkaService.getAutor();
+    this.studenci=KsiazkaService.getStudent();
 
   }
-
-  ngOnInit(): void {
-    var resAutor = fetch("http://localhost:3000/autor");
-    resAutor.then(x => {
-      x.json().then(data => {
-        this.autorzy = data as Autor[];
-      })
-    })
-
-    var resKsiazka = fetch("http://localhost:3000/ksiazka");
-    resKsiazka.then(x => {
-      x.json().then(data => {
-        this.ksiazki = data as Ksiazka[];
-      })
-    })
-  }
-
   dodajKsiazke(ksiazka: Ksiazka){
     
     this.ksiazki.push(ksiazka);
