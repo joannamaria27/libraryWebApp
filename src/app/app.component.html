@@ -1,26 +1,24 @@
-<!--<app-dodawanie-autor (dodajAutora)="dodajAutora($event)"></app-dodawanie-autor>-->
 
-<!--<ul class="Autor" >-->
-<!--  <li *ngFor="let autor of autorzy" [class.selected]="autor === wybranyAutor" (click)="onSelectA(autor)">-->
-<!--     <button> {{autor.imie}} {{autor.nazwisko}}</button>-->
-<!--  </li>-->
-<!--</ul>-->
+<app-dodawanie-autor (dodajAutora)="dodajAutora($event)"></app-dodawanie-autor>
 
-<!--<app-dodawanie-ksiazka (dodajKsiazke)="dodajKsiazke($event)"></app-dodawanie-ksiazka>-->
+<ul class="Autor" >
+  <li *ngFor="let autor of autorzy" [class.selected]="autor === wybranyAutor" (click)="onSelectA(autor)">
+     <button> {{autor.imie}} {{autor.nazwisko}}</button>
+  </li>
+</ul>
 
-<!--<ul class="Ksiazka" >-->
-<!--  <li *ngFor="let ksiazka of ksiazki" [class.selected]="ksiazka === wybranaKsiazka" (click)="onSelectK(ksiazka)">-->
-<!--     <button> {{ksiazka.tytul}} {{ksiazka.liczbaStron}}</button>-->
-<!--  </li>-->
-<!--</ul>-->
+<app-dodawanie-ksiazka (dodajKsiazke)="dodajKsiazke($event)"></app-dodawanie-ksiazka>
 
-<!--<app-dodawanie-student (dodajStudenta)="dodajStudenta($event)"></app-dodawanie-student>-->
+<ul class="Ksiazka" >
+  <li *ngFor="let ksiazka of ksiazki" [class.selected]="ksiazka === wybranaKsiazka" (click)="onSelectK(ksiazka)">
+     <button> {{ksiazka.tytul}} {{ksiazka.liczbaStron}}</button>
+  </li>
+</ul>
 
-<!--<ul class="Student" >-->
-<!--  <li *ngFor="let student of studenci" [class.selected]="student === wybranyStudent" (click)="onSelectS(student)">-->
-<!--     <button> {{student.imie}} {{student.nazwisko}}</button>-->
-<!--  </li>-->
-<!--</ul>-->
+<app-dodawanie-student (dodajStudenta)="dodajStudenta($event)"></app-dodawanie-student>
 
-<!--<app-home></app-home>-->
-<app-home></app-home>
+<ul class="Student" >
+  <li *ngFor="let student of studenci" [class.selected]="student === wybranyStudent" (click)="onSelectS(student)">
+     <button> {{student.imie}} {{student.nazwisko}}</button>
+  </li>
+</ul>
