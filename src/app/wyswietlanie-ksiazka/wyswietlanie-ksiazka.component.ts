@@ -7,14 +7,10 @@ import { Ksiazka } from '../models/ksiazka';
   styleUrls: ['./wyswietlanie-ksiazka.component.css']
 })
 export class WyswietlanieKsiazkaComponent implements OnInit {
-
   ksiazki: Ksiazka[]=[];
   wybranaKsiazka: Ksiazka;
 
-
   constructor() {
-
-
   }
 
   ngOnInit(): void {
@@ -26,15 +22,12 @@ export class WyswietlanieKsiazkaComponent implements OnInit {
     })
   }
 
-  // dodajKsiazke(ksiazka: Ksiazka){
-    
-  //   this.ksiazki.push(ksiazka);
-  // }
-
   onSelectK(ksiazka: Ksiazka): void {
     this.wybranaKsiazka = ksiazka;
   }
- 
+  edytuj() {
+    //przejdz do komponentu edytuj-ksiazka
+  }
   
 
 }
