@@ -1,4 +1,21 @@
-h1
+.kolor-czcionka
 {
     color: darksalmon;
+}
+
+footer 
+{
+    height: 50px;
+    width:100%;
+    height:60px;		/* Wysokość nagłówka */
+    background: darksalmon;
+    position: fixed;
+    bottom: 0;
+}
+
+.stopka-czcionka
+{
+    color: black;
+    text-align: center;
+    margin: 10px;
 }
