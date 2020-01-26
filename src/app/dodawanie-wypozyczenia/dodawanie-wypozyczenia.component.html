@@ -2,6 +2,7 @@
 <p>Dodaj wypozyczenie:</p>
 
 <form [formGroup]="Formularz" (ngSubmit)="wyslijFormularz()">
+
     id ksiazki: <select formControlName="idKsiazki" type="number" name="idKsiazki" [(ngModel)]="noweWypozyczenie.idKsiazki"
     [ngClass]="{'in-valid': !Formularz.controls['idKsiazki'].valid && Formularz.controls['idKsiazki'].touched}">
   

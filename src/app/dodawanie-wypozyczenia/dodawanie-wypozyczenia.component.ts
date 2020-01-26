@@ -27,7 +27,7 @@ constructor(private fb: FormBuilder) {
   });
 }
 
-  ngOnInit(): void {
+  ngOnInit() {
     var res = fetch("http://localhost:3000/ksiazka");
     res.then(x => {
       x.json().then(data => {
