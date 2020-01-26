@@ -19,6 +19,11 @@
       "id": 3,
       "imie": "Ignacy",
       "nazwisko": "Krasicki"
+    },
+    {
+      "imie": "a",
+      "nazwisko": "a",
+      "id": 4
     }
   ],
   "ksiazka": [
@@ -82,6 +87,13 @@
       "nazwisko": "Sienkiewiczowski",
       "dataUrodzenia": "1995-06-26",
       "pesel": 95062600000
+    },
+    {
+      "imie": "a",
+      "nazwisko": "a",
+      "dataUrodzenia": "2020-01-23",
+      "pesel": "12121212121",
+      "id": 5
     }
   ]
 }

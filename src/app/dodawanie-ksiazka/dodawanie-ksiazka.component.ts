@@ -38,6 +38,7 @@ export class DodawanieKsiazkaComponent implements OnInit {
 
   dodawanieKsiazki() {
     this.dodajKsiazke.emit(this.nowaKsiazka);
+    alert("Dodano ksiazke: " + "\nImie: " + this.nowaKsiazka.tytul )
 
     fetch("http://localhost:3000/ksiazka/", {
       method: "post",
@@ -53,5 +54,6 @@ export class DodawanieKsiazkaComponent implements OnInit {
     })
 
   }
-
+ 
+  
 }
