@@ -19,7 +19,7 @@
       "id": 3,
       "imie": "Ignacy",
       "nazwisko": "Krasicki"
-    },
+    }
   ],
   "ksiazka": [
     {
@@ -46,6 +46,9 @@
       "dataWydania": "2002-02-01",
       "autorId": 2
     },
+    {
+      "id": 3
+    }
   ],
   "student": [
     {
@@ -82,6 +85,6 @@
       "nazwisko": "Sienkiewiczowski",
       "dataUrodzenia": "1995-06-26",
       "pesel": 95062600000
-    },
+    }
   ]
 }

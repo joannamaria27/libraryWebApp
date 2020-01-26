@@ -1,14 +1,17 @@
 <p>Dodaj autora:</p>
 
 <form [formGroup]="Formularz" (ngSubmit)="wyslijFormularz()">
+
     Imie: <input formControlName="imie" type="text" name="imie" [(ngModel)]="nowyAutor.imie"
     [ngClass]="{'in-valid': !Formularz.controls['imie'].valid && Formularz.controls['imie'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['imie'].valid && Formularz.controls['imie'].touched">
         Musisz podać imię</b><br>
+
     Nazwisko: <input formControlName="nazwisko" type="text" name="nazwisko" [(ngModel)]="nowyAutor.nazwisko"
     [ngClass]="{'in-valid': !Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched">
         Musisz podać nazwisko</b><br>
+        
     <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
 </form>
 

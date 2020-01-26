@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Autor } from '../models/autor';
 import { Ksiazka } from '../models/ksiazka';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 
@@ -12,27 +13,31 @@ import { Ksiazka } from '../models/ksiazka';
 export class DodawanieKsiazkaComponent implements OnInit {
   @Output() dodajKsiazke: EventEmitter<Ksiazka> = new EventEmitter();
   nowaKsiazka: Ksiazka = new Ksiazka();
-  autorzy: Autor[] = new Array<Autor>();
+  autorzyBD: Autor[] = new Array<Autor>();
+  Formularz: FormGroup;
+  post: any;
 
-  constructor() {
-
+  constructor(private fb: FormBuilder) {
+    this.Formularz = fb.group({
+    'tytul': [null, Validators.required],
+    'idAutora' : [null, Validators.required],
+    'liczbaStron' : [null, Validators.required],
+    'isbn' : [null, Validators.compose([Validators.required, Validators.minLength(13), Validators.maxLength(13)])],
+    'dataWydania' : [null, Validators.required]
+    });
   }
 
   ngOnInit() {
     var res = fetch("http://localhost:3000/autor");
     res.then(x => {
       x.json().then(data => {
-        this.autorzy = data as Autor[];
+        this.autorzyBD = data as Autor[];
       })
     })
   }
 
   dodawanieKsiazki() {
     this.dodajKsiazke.emit(this.nowaKsiazka);
-    console.log("nowaKsiazka");
-    console.log(this.nowaKsiazka);
-    console.log("dodajKsiazke");
-    console.log(this.dodajKsiazke)  ;
 
     fetch("http://localhost:3000/ksiazka/", {
       method: "post",
