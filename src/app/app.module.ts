@@ -11,6 +11,8 @@ import { UsuwanieKsiazkaComponent } from './usuwanie-ksiazka/usuwanie-ksiazka.co
 import { HomeComponent } from './home/home.component';
 import { DodawanieWypozyczeniaComponent } from './dodawanie-wypozyczenia/dodawanie-wypozyczenia.component';
 import { WyswietlanieKsiazkaComponent } from './wyswietlanie-ksiazka/wyswietlanie-ksiazka.component';
+import { WyswietlanieStudentComponent } from './wyswietlanie-student/wyswietlanie-student.component';
+import { WyswietlanieAutorComponent } from './wyswietlanie-autor/wyswietlanie-autor.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { WyswietlanieKsiazkaComponent } from './wyswietlanie-ksiazka/wyswietlani
     HomeComponent,
     DodawanieWypozyczeniaComponent,
     WyswietlanieKsiazkaComponent,
+    WyswietlanieStudentComponent,
+    WyswietlanieAutorComponent,
     
   ],
   imports: [
