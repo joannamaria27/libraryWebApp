@@ -22,6 +22,7 @@ export class DodawanieAutorComponent implements OnInit {
 
   wyslijFormularz() {
     this.dodajAutora.emit(this.nowyAutor);
+    alert("Dodano studenta: " + "\nImie: " + this.nowyAutor.imie + "\nNazwisko: " + this.nowyAutor.nazwisko)
 
     fetch("http://localhost:3000/autor/", {
       method: "post",

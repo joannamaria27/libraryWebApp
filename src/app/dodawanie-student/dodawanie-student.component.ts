@@ -18,17 +18,18 @@ export class DodawanieStudentComponent implements OnInit {
     'imie': [null, Validators.required],
     'nazwisko' : [null, Validators.required],
     'data' : [null, Validators.required],
-    'pesel' : [null, Validators.compose([Validators.required, Validators.minLength(13), Validators.maxLength(13)])],
+    'pesel' : [null, Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11)])],
     });
   }
-  wyślijFormularz() {
+  wyslijFormularz() {
     this.dodajStudenta.emit(this.nowyStudent);
+    alert("Dodano studenta: " + "\nImie: " + this.nowyStudent.imie + "\nNazwisko: " + this.nowyStudent.nazwisko + "\nData urodzenia: " + this.nowyStudent.dataUrodzenia + "\nPESEL: " + this.nowyStudent.pesel)
 
     fetch("http://localhost:3000/student/", {
       method: "post",
       headers: {
+        'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
       },
       body: JSON.stringify(this.nowyStudent)
     }).then((res) => {
@@ -39,10 +40,6 @@ export class DodawanieStudentComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  dodawanieStudenta() {
-    
   }
 }
 
