@@ -1,11 +1,24 @@
-<div class="container row">
-  <div class="container col-md-12 row ml-2 mt-3">
-    <a class="btn btn-secondary mx-2 py-2" routerLink="/">Home</a>
-    <a class="btn btn-secondary mx-2 py-2" routerLink="/student">Student</a>
-    <a class="btn btn-secondary mx-2 py-2" routerLink="/autor">Autor</a>
-    <a class="btn btn-secondary mx-2 py-2" routerLink="/ksiazka">Książka</a>
+<nav class="navbar navbar-dark bg-dark">
+<h1>BIBLIOTEKA</h1>
+</nav>
+<nav class="navbar-dark">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link" id="nav-ksiazka-tab" data-toggle="tab" role="tab" aria-controls="nav-ksiazka" aria-selected="false" routerLink="/ksiazka">Książka</a>
+    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"  role="tab" aria-controls="nav-home" aria-selected="true" routerLink="/">Home</a>
+    <a class="nav-item nav-link" id="nav-student-tab" data-toggle="tab"  role="tab" aria-controls="nav-student" aria-selected="false" routerLink="/student">Student</a>
+    <a class="nav-item nav-link" id="nav-autor-tab" data-toggle="tab" role="tab" aria-controls="nav-autor" aria-selected="false" routerLink="/autor">Autor</a>
+    <!-- <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" role="tab" aria-controls="nav-contact" aria-selected="false" routerLink="/wyporzyczenie">Wyporzyczenie</a> -->
+
   </div>
-  <div class="container col-md-12">
-    <router-outlet></router-outlet>
-  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+  <!-- <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div> -->
+</div>
+
+<div class="container col-md-12">
+  <router-outlet></router-outlet>
 </div>
