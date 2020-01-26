@@ -1,0 +1,15 @@
+#left {
+    float: left;
+    /* width: 450px; */
+    /* background-color: #efefef; */
+  }
+  #right {
+    float: left;
+    /* width: 450px; */
+    /* background-color: #a3a3a3; */
+  }
+
+  #enter
+  {
+    clear: both;
+  }

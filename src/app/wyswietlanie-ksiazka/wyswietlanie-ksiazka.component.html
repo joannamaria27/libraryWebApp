@@ -1,17 +1,41 @@
-<ul class="Ksiazka" >
- <li *ngFor="let ksiazka of ksiazki" [class.selected]="ksiazka === wybranaKsiazka" (click)="onSelectK(ksiazka)">
-    <button> {{ksiazka.tytul}} </button>
- </li>
-</ul>
+<!-- <div class="col-3 "><br>
+   <ul class="Ksiazka list-group" >
+   <li class="list-group-item list-group-item-warning " *ngFor="let ksiazka of ksiazki" [class.selected]="ksiazka === wybranaKsiazka" (click)="onSelectK(ksiazka)">
+      <button> {{ksiazka.tytul}} </button>
+   </li>
+   </ul>
 
-<div *ngIf="wybranaKsiazka" >
+
+<div  *ngIf="wybranaKsiazka" >
    <h1>Szczegóły:</h1>
   {{wybranaKsiazka.tytul}}
   {{wybranaKsiazka.liczbaStron}}
-
-
 </div>
-
+<div class="">
 <br>
 <h1>Dodaj</h1>
 <app-dodawanie-ksiazka></app-dodawanie-ksiazka>
+</div> -->
+
+<div >
+   <div class="col-3" id="left"><br>
+      <ul class="Ksiazka list-group" >
+         <li class="list-group-item list-group-item-warning " *ngFor="let ksiazka of ksiazki" [class.selected]="ksiazka === wybranaKsiazka" (click)="onSelectK(ksiazka)">
+            <button> {{ksiazka.tytul}} </button>
+         </li>
+      </ul>
+   </div>
+   <div class="col-3" id="right"><br>
+      <div  *ngIf="wybranaKsiazka" >
+         <h1>Szczegóły:</h1>
+        {{wybranaKsiazka.tytul}}
+        {{wybranaKsiazka.liczbaStron}}
+      </div>
+   </div>
+</div>
+<br>
+<div class="col-3" id="enter">
+   <br>
+<h1>Dodaj</h1>
+<app-dodawanie-ksiazka></app-dodawanie-ksiazka>
+</div>
