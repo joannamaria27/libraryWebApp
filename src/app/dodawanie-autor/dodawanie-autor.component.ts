@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Autor } from '../models/autor';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dodawanie-autor',
@@ -9,13 +10,17 @@ import { Autor } from '../models/autor';
 export class DodawanieAutorComponent implements OnInit {
   @Output() dodajAutora: EventEmitter<Autor> = new EventEmitter();
   nowyAutor: Autor = new Autor();
+  Formularz: FormGroup;
+  post: any;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) {
+    this.Formularz = fb.group({
+      'imie': [null, Validators.required],
+      'nazwisko' : [null, Validators.required],
+      });
+   }
 
-  ngOnInit() {
-  }
-  
-  dodawanieAutora() {
+  wyslijFormularz() {
     this.dodajAutora.emit(this.nowyAutor);
 
     fetch("http://localhost:3000/autor/", {
@@ -30,6 +35,8 @@ export class DodawanieAutorComponent implements OnInit {
         console.log("Successful " + data);
       })
     })
-    
+  }
+
+  ngOnInit() {
   }
 }
