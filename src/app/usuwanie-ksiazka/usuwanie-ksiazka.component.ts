@@ -27,7 +27,7 @@ export class UsuwanieKsiazkaComponent implements OnInit {
 
   usuwanieKsiazka(id : number)
   {
-   
+   //for
       if(id==this.wybranaKsiazka.ksiazkaId)
       {
         fetch("http://localhost:3000/ksiazka/" + id, {
