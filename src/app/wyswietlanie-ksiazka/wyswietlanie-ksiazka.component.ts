@@ -8,7 +8,6 @@ import { Ksiazka } from '../models/ksiazka';
 })
 export class WyswietlanieKsiazkaComponent implements OnInit {
 
-  title = 'Biblioteka';
   ksiazki: Ksiazka[]=[];
   wybranaKsiazka: Ksiazka;
 
@@ -27,10 +26,10 @@ export class WyswietlanieKsiazkaComponent implements OnInit {
     })
   }
 
-  dodajKsiazke(ksiazka: Ksiazka){
+  // dodajKsiazke(ksiazka: Ksiazka){
     
-    this.ksiazki.push(ksiazka);
-  }
+  //   this.ksiazki.push(ksiazka);
+  // }
 
   onSelectK(ksiazka: Ksiazka): void {
     this.wybranaKsiazka = ksiazka;

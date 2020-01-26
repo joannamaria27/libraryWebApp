@@ -1,0 +1,28 @@
+<div >
+    <div class="col-3" id="left"><br>
+       <ul class="Wypozyczenie list-group" >
+          <li class="list-group-item list-group-item-warning " *ngFor="let wypozyczenie of wypozyczenia" [class.selected]="wypozyczenie === wybraneWypozyczenie" (click)="onSelectW(wypozyczenie)">
+             <button> {{wypozyczenie.tytul}} </button>
+          </li>
+       </ul>
+    </div>
+    <div class="col-3" id="right"><br>
+       <div  *ngIf="wybraneWypozyczenie" >
+          <h1>Szczegóły:</h1>
+         ID: {{wybraneWypozyczenie.wypozyczenieId}} <br>
+         Ksiazka: {{wybraneWypozyczenie.idKsiazki}} <br>
+         Student: {{wybraneWypozyczenie.idStudenta}} <br>
+         Data wypozyczenia: {{wybraneWypozyczenie.dataWypozyczenia}} <br>
+         Data (do) zwrotu: {{wybraneWypozyczenie.dataDoZwrotu}} <br>
+
+       </div>
+    </div>
+ </div>
+ <br>
+ <div class="col-3" id="enter">
+    <br>
+ <h1>Dodaj</h1>
+<app-dodawanie-wypozyczenia></app-dodawanie-wypozyczenia>
+
+     </div>
+ 
