@@ -1,0 +1,26 @@
+<div>
+  <div class="col-3" id="left"><br>
+    <ul class="Student list-group">
+      <li class="list-group-item list-group-item-warning " *ngFor="let student of studenci"
+          [class.selected]="student === student" (click)="onSelectS(student)">
+        <button> {{student.imie}} {{student.nazwisko}}</button>
+      </li>
+    </ul>
+  </div>
+  <div class="col-3" id="right"><br>
+    <div *ngIf="student">
+      <h1>Szczegóły:</h1>
+      ID: {{student.studentId}} <br>
+      Imie: {{student.imie}} <br>
+      Nazwisko: {{student.nazwisko}} <br>
+      Data urodzenia: {{student.dataUrodzenia}} <br>
+      PESEL: {{student.pesel}} <br>
+    </div>
+  </div>
+</div>
+<br>
+<div class="col-3" id="enter">
+  <br>
+  <h1>Dodaj</h1>
+  <app-dodawanie-student></app-dodawanie-student>
+</div>

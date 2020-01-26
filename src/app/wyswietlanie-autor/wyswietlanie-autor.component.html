@@ -1,0 +1,23 @@
+<div >
+  <div class="col-3" id="left"><br>
+    <ul class="Autor list-group" >
+      <li class="list-group-item list-group-item-warning " *ngFor="let autor of autorzy" [class.selected]="autor === wybranyAutor" (click)="onSelectA(autor)">
+        <button> {{autor.imie}} {{autor.nazwisko}} </button>
+      </li>
+    </ul>
+  </div>
+  <div class="col-3" id="right"><br>
+    <div  *ngIf="wybranyAutor" >
+      <h1>Szczegóły:</h1>
+      ID: {{wybranyAutor.autorId}} <br>
+      Imie: {{wybranyAutor.imie}} <br>
+      Nazwisko: {{wybranyAutor.nazwisko}} <br>
+    </div>
+  </div>
+</div>
+<br>
+<div class="col-3" id="enter">
+  <br>
+  <h1>Dodaj</h1>
+  <app-dodawanie-autor></app-dodawanie-autor>
+</div>
