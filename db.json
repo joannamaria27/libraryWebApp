@@ -19,7 +19,7 @@
       "id": 3,
       "imie": "Ignacy",
       "nazwisko": "Krasicki"
-    }
+    },
   ],
   "ksiazka": [
     {
@@ -46,40 +46,42 @@
       "dataWydania": "2002-02-01",
       "autorId": 2
     },
-    {
-      "id": 3
-    }
   ],
   "student": [
     {
+      "id": 0,
       "imie": "Adam",
       "nazwisko": "Ewowski",
       "dataUrodzenia": "1999-01-21",
       "pesel": 99012100000
     },
     {
+      "id": 1,
       "imie": "Ewa",
       "nazwisko": "Adamowska",
       "dataUrodzenia": "1999-02-22",
       "pesel": 99022200000
     },
     {
+      "id": 2,
       "imie": "Adrian",
       "nazwisko": "Kowalski",
       "dataUrodzenia": "1997-04-24",
       "pesel": 97042400000
     },
     {
+      "id": 3,
       "imie": "Adianna",
       "nazwisko": "Nowak",
       "dataUrodzenia": "1996-05-25",
       "pesel": 96052500000
     },
     {
+      "id": 4,
       "imie": "Henryk",
       "nazwisko": "Sienkiewiczowski",
       "dataUrodzenia": "1995-06-26",
       "pesel": 95062600000
-    }
+    },
   ]
 }

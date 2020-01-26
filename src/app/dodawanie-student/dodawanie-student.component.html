@@ -1,6 +1,6 @@
 <p>Dodaj studenta:</p>
 
-<form [formGroup]="Formularz" (ngSubmit)="przycisk()">
+<form [formGroup]="Formularz" (ngSubmit)="wyslijFormularz()">
     Imie: <input formControlName="imie" type="text" name="imie" [(ngModel)]="nowyStudent.imie"
     [ngClass]="{'in-valid': !Formularz.controls['imie'].valid && Formularz.controls['imie'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['imie'].valid && Formularz.controls['imie'].touched">
@@ -13,9 +13,9 @@
     [ngClass]="{'in-valid': !Formularz.controls['data'].valid && Formularz.controls['data'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['data'].valid && Formularz.controls['data'].touched">
         Podaj poprawną datę</b><br>
-    PESEL: <input formControlName="pesel" type="text" name="pesel" [(ngModel)]="nowyStudent.pesel"
+    PESEL: <input formControlName="pesel" type="nmber" name="pesel" [(ngModel)]="nowyStudent.pesel"
     [ngClass]="{'in-valid': !Formularz.controls['pesel'].valid && Formularz.controls['pesel'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['pesel'].valid && Formularz.controls['pesel'].touched">
-        Podaj 13-cyfrowy PESEL</b><br>
-    <input [disabled]="!Formularz.valid" type="submit" value="Zastosuj">
+        Podaj 11-cyfrowy PESEL</b><br>
+    <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
 </form>

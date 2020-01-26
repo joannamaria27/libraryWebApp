@@ -9,7 +9,7 @@
     [ngClass]="{'in-valid': !Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched">
         Musisz podać nazwisko</b><br>
-    <input [disabled]="!Formularz.valid" type="submit" value="Zastosuj">
+    <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
 </form>
 
 
