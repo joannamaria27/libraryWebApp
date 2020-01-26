@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Wypozyczenie } from '../models/wypozyczenie';
 import { Ksiazka } from '../models/ksiazka';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Student } from '../models/student';
 
 @Component({
   selector: 'app-dodawanie-wypozyczenia',
@@ -11,7 +12,8 @@ import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 export class DodawanieWypozyczeniaComponent implements OnInit {
 @Output() dodajWypozyczenie: EventEmitter<Wypozyczenie> = new EventEmitter();
 noweWypozyczenie: Wypozyczenie = new Wypozyczenie();
-ksiazkiBD: Ksiazka[] = new Array<Ksiazka>();
+ksiazkaBD: Ksiazka[] = new Array<Ksiazka>();
+studentBD: Student[] = new Array<Student>();
 Formularz: FormGroup;
 post: any;
 
@@ -22,13 +24,20 @@ constructor(private fb: FormBuilder) {
     'dataWypozyczenia':[null, Validators.required],
     'dataDoZwrotu':[null, Validators.required]
 
-  })}
+  });
+}
 
-  ngOnInit() {
+  ngOnInit(): void {
     var res = fetch("http://localhost:3000/ksiazka");
     res.then(x => {
       x.json().then(data => {
-        this.ksiazkiBD = data as Ksiazka[];
+        this.ksiazkaBD = data as Ksiazka[];
+      })
+    })
+    var res = fetch("http://localhost:3000/student");
+    res.then(x => {
+      x.json().then(data => {
+        this.studentBD = data as Student[];
       })
     })
   }

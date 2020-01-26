@@ -1,13 +1,12 @@
 {
   "wypozyczenie": [
     {
-      "id":0,
-      "idKsiazki":0,
-      "idStudenta":0,
-      "dataWypozyczenia":"2001-01-01",
+      "id": 0,
+      "idKsiazki": 0,
+      "idStudenta": 0,
+      "dataWypozyczenia": "2001-01-01",
       "dataDoZwrotu": "2001-02-01"
     }
-
   ],
   "autor": [
     {
@@ -55,6 +54,14 @@
       "liczbaStron": 1500,
       "dataWydania": "2002-02-01",
       "autorId": 2
+    },
+    {
+      "tytul": "a",
+      "liczbaStron": 11,
+      "isbn": "1111111211111",
+      "dataWydania": "2020-01-29",
+      "idAutora": "0",
+      "id": 3
     }
   ],
   "student": [

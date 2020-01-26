@@ -36,7 +36,7 @@ export class DodawanieKsiazkaComponent implements OnInit {
     })
   }
 
-  dodawanieKsiazki() {
+  wyslijFormularz() {
     this.dodajKsiazke.emit(this.nowaKsiazka);
     alert("Dodano ksiazke: " + "\nImie: " + this.nowaKsiazka.tytul )
 
