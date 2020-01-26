@@ -9,6 +9,9 @@ import { DodawanieStudentComponent } from './dodawanie-student/dodawanie-student
 import { WypozyczeniaComponent } from './wypozyczenia/wypozyczenia.component';
 import { UsuwanieKsiazkaComponent } from './usuwanie-ksiazka/usuwanie-ksiazka.component';
 import { HomeComponent } from './home/home.component';
+import { DodawanieWypozyczeniaComponent } from './dodawanie-wypozyczenia/dodawanie-wypozyczenia.component';
+import { WyswietlanieKsiazkaComponent } from './wyswietlanie-ksiazka/wyswietlanie-ksiazka.component';
+
 
 @NgModule({
 
@@ -20,7 +23,10 @@ import { HomeComponent } from './home/home.component';
     DodawanieStudentComponent,
     WypozyczeniaComponent,
     UsuwanieKsiazkaComponent,
-    HomeComponent
+    HomeComponent,
+    DodawanieWypozyczeniaComponent,
+    WyswietlanieKsiazkaComponent,
+    
   ],
   imports: [
     FormsModule,

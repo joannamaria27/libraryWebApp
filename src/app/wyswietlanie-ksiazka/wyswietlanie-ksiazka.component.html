@@ -1,0 +1,9 @@
+<ul class="Ksiazka" >
+ <li *ngFor="let ksiazka of ksiazki" [class.selected]="ksiazka === wybranaKsiazka" (click)="onSelectK(ksiazka)">
+    <button> {{ksiazka.tytul}} {{ksiazka.liczbaStron}}</button>
+ </li>
+</ul>
+
+
+
+<app-dodawanie-ksiazka></app-dodawanie-ksiazka>

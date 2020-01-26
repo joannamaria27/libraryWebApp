@@ -48,6 +48,22 @@
     },
     {
       "id": 3
+    },
+    {
+      "tytul": "a",
+      "liczbaStron": "2",
+      "isbn": "2",
+      "dataWydania": "S",
+      "idAutora": "0",
+      "id": 4
+    },
+    {
+      "tytul": "a",
+      "liczbaStron": "2",
+      "isbn": "2",
+      "dataWydania": "S",
+      "idAutora": "0",
+      "id": 5
     }
   ],
   "student": [
