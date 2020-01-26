@@ -4,14 +4,16 @@ import { DodawanieStudentComponent } from './dodawanie-student/dodawanie-student
 import { DodawanieAutorComponent } from './dodawanie-autor/dodawanie-autor.component'
 import { WyswietlanieKsiazkaComponent } from './wyswietlanie-ksiazka/wyswietlanie-ksiazka.component'
 import { WypozyczeniaComponent } from './wypozyczenia/wypozyczenia.component';
+import {WyswietlanieStudentComponent} from "./wyswietlanie-student/wyswietlanie-student.component";
+import {WyswietlanieAutorComponent} from "./wyswietlanie-autor/wyswietlanie-autor.component";
 
 
 const routes: Routes = [
   { path: "", component: WypozyczeniaComponent, pathMatch: 'full'},
-  { path: "student", component: DodawanieStudentComponent, pathMatch: 'full'},
-  { path: "autor", component: DodawanieAutorComponent, pathMatch: 'full'},
+  { path: "student", component: WyswietlanieStudentComponent, pathMatch: 'full'},
+  { path: "autor", component: WyswietlanieAutorComponent, pathMatch: 'full'},
   { path: "ksiazka", component: WyswietlanieKsiazkaComponent, pathMatch: 'full'},
-  
+
 ];
 
 @NgModule({

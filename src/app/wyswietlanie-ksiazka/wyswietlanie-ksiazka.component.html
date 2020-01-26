@@ -28,8 +28,12 @@
    <div class="col-3" id="right"><br>
       <div  *ngIf="wybranaKsiazka" >
          <h1>Szczegóły:</h1>
-        {{wybranaKsiazka.tytul}}
-        {{wybranaKsiazka.liczbaStron}}
+        ID: {{wybranaKsiazka.ksiazkaId}} <br>
+        Tytuł: {{wybranaKsiazka.tytul}} <br>
+        Liczba stron: {{wybranaKsiazka.liczbaStron}} <br>
+        Data wydania: {{wybranaKsiazka.dataWydania}} <br>
+        ISBN: {{wybranaKsiazka.isbn}} <br>
+        ID autora: {{wybranaKsiazka.autorId}} <br>
       </div>
    </div>
 </div>

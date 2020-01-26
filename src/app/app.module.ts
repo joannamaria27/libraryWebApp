@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { DodawanieWypozyczeniaComponent } from './dodawanie-wypozyczenia/dodawanie-wypozyczenia.component';
 import { WyswietlanieKsiazkaComponent } from './wyswietlanie-ksiazka/wyswietlanie-ksiazka.component';
 import { EdycjaKsiazkaComponent } from './edycja-ksiazka/edycja-ksiazka.component';
+import { WyswietlanieStudentComponent } from './wyswietlanie-student/wyswietlanie-student.component';
+import { WyswietlanieAutorComponent } from './wyswietlanie-autor/wyswietlanie-autor.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { EdycjaKsiazkaComponent } from './edycja-ksiazka/edycja-ksiazka.componen
     DodawanieWypozyczeniaComponent,
     WyswietlanieKsiazkaComponent,
     EdycjaKsiazkaComponent,
+    WyswietlanieStudentComponent,
+    WyswietlanieAutorComponent,
     
   ],
   imports: [
