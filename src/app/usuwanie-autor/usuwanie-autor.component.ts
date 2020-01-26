@@ -27,7 +27,7 @@ wybranyAutor: Autor;
 
   usuwanieAutor(id : number)
   {
-   
+   //for
       if(id==this.wybranyAutor.autorId)
       {
         fetch("http://localhost:3000/autor/" + id, {
