@@ -16,15 +16,10 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     DodawanieAutorComponent,
-
     DodawanieKsiazkaComponent,
-
     DodawanieStudentComponent,
-
     WypozyczeniaComponent,
-
     UsuwanieKsiazkaComponent,
-
     HomeComponent
   ],
   imports: [
