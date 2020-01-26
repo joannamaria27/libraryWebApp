@@ -1,4 +1,14 @@
 {
+  "wypozyczenie": [
+    {
+      "id":0,
+      "idKsiazki":0,
+      "idStudenta":0,
+      "dataWypozyczenia":"2001-01-01",
+      "dataDoZwrotu": "2001-02-01"
+    }
+
+  ],
   "autor": [
     {
       "id": 0,
@@ -19,16 +29,6 @@
       "id": 3,
       "imie": "Ignacy",
       "nazwisko": "Krasicki"
-    },
-    {
-      "imie": "a",
-      "nazwisko": "a",
-      "id": 4
-    },
-    {
-      "imie": "as",
-      "nazwisko": "as",
-      "id": 5
     }
   ],
   "ksiazka": [
@@ -92,13 +92,6 @@
       "nazwisko": "Sienkiewiczowski",
       "dataUrodzenia": "1995-06-26",
       "pesel": 95062600000
-    },
-    {
-      "imie": "a",
-      "nazwisko": "a",
-      "dataUrodzenia": "2020-01-23",
-      "pesel": "12121212121",
-      "id": 5
     }
   ]
 }
