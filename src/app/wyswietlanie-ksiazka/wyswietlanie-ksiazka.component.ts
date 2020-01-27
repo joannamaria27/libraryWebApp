@@ -25,9 +25,26 @@ export class WyswietlanieKsiazkaComponent implements OnInit {
   onSelectK(ksiazka: Ksiazka): void {
     this.wybranaKsiazka = ksiazka;
   }
-  edytuj() {
-    //przejdz do komponentu edytuj-ksiazka
-  }
+  usuwanieKsiazka(id : number)
+  {
+    console.log(id);
+   for(let i=0; i<this.ksiazki.length; i++)
+{
+      if(id==this.ksiazki[i].id)
+      {
+        fetch("http://localhost:3000/ksiazka/" + id, {
+          method: "delete",
+          headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+          }
+        }).then((res) => {
+          res.json().then(data => {
+          console.log("Successful " + data);
+          })
+        })
+      } 
+  }}
   
 
 }

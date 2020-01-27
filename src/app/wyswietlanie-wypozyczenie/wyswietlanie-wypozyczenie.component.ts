@@ -26,4 +26,26 @@ export class WyswietlanieWypozyczenieComponent implements OnInit {
   onSelectW(wypozyczenie: Wypozyczenie): void {
     this.wybraneWypozyczenie = wypozyczenie;
   }
+
+  usuwanieWypozyczenie(id : number)
+  {
+    console.log(id);
+   for(let i=0; i<this.wypozyczenia.length; i++)
+{
+      if(id==this.wypozyczenia[i].id)
+      {
+        fetch("http://localhost:3000/wypozyczenie/" + id, {
+          method: "delete",
+          headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+          }
+        }).then((res) => {
+          res.json().then(data => {
+          console.log("Successful " + data);
+          })
+        })
+      } 
+  }}
+
 }

@@ -1,13 +1,6 @@
 {
   "wypozyczenie": [
     {
-      "id": 0,
-      "idKsiazki": 0,
-      "idStudenta": 0,
-      "dataWypozyczenia": "2001-01-01",
-      "dataDoZwrotu": "2001-02-01"
-    },
-    {
       "idKsiazki": "undefined",
       "idStudenta": "undefined",
       "dataWypozyczenia": "2020-01-15",

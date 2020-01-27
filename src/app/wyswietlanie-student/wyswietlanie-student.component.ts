@@ -26,5 +26,25 @@ export class WyswietlanieStudentComponent implements OnInit {
   onSelectS(student: Student): void {
     this.student = student;
   }
+  usuwanieStudent(id : number)
+  {
+    console.log(id);
+   for(let i=0; i<this.studenci.length; i++)
+{
+      if(id==this.studenci[i].id)
+      {
+        fetch("http://localhost:3000/student/" + id, {
+          method: "delete",
+          headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+          }
+        }).then((res) => {
+          res.json().then(data => {
+          console.log("Successful " + data);
+          })
+        })
+      } 
+  }}
 
 }
