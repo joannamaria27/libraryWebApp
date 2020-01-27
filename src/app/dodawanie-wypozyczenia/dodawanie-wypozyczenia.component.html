@@ -1,20 +1,19 @@
-<p>dodawanie-wypozyczenia works!</p>
 <p>Dodaj wypozyczenie:</p>
 
 <form [formGroup]="Formularz" (ngSubmit)="wyslijFormularz()">
 
     id ksiazki: <select formControlName="idKsiazki" type="number" name="idKsiazki" [(ngModel)]="noweWypozyczenie.idKsiazki"
     [ngClass]="{'in-valid': !Formularz.controls['idKsiazki'].valid && Formularz.controls['idKsiazki'].touched}">
-  
+
       <option *ngFor="let ksiazka of ksiazkaBD" [value]="ksiazka.id">{{ksiazka.tytul}}</option>
     </select>
     <b class="alert" *ngIf="!Formularz.controls['idKsiazki'].valid && Formularz.controls['idKsiazki'].touched">
         Musisz wybrać ksiazke</b><br>
-  
+
 
     id studenta: <select formControlName="idStudenta" type="number" name="idStudenta" [(ngModel)]="noweWypozyczenie.idStudenta"
     [ngClass]="{'in-valid': !Formularz.controls['idStudenta'].valid && Formularz.controls['idStudenta'].touched}">
-  
+
       <option *ngFor="let student of studentBD" [value]="student.id">{{student.nazwisko +" " + student.imie}}</option>
     </select>
     <b class="alert" *ngIf="!Formularz.controls['idStudenta'].valid && Formularz.controls['idStudenta'].touched">
@@ -29,6 +28,6 @@
     [ngClass]="{'in-valid': !Formularz.controls['dataDoZwrotu'].valid && Formularz.controls['dataDoZwrotu'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['dataDoZwrotu'].valid && Formularz.controls['dataDoZwrotu'].touched">
         Podaj poprawną datę</b><br>
-        
+
     <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
 </form>
