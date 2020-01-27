@@ -23,7 +23,6 @@ constructor(private fb: FormBuilder) {
     'idStudenta':[null, Validators.required],
     'dataWypozyczenia':[null, Validators.required],
     'dataDoZwrotu':[null, Validators.required]
-
   });
 }
 
@@ -46,7 +45,7 @@ constructor(private fb: FormBuilder) {
   {
     this.dodajWypozyczenie.emit(this.noweWypozyczenie);
     alert("Dodano wypozyczenie: "+"\nStudent: "+this.noweWypozyczenie.idStudenta+"Ksizka: "+this.noweWypozyczenie.idKsiazki);
-    fetch("http://localhost:3000/", {
+    fetch("http://localhost:3000/wypozyczenie/", {
       method: "post",
       headers: {
         'Accept': 'application/json',

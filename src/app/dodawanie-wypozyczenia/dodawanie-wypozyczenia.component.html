@@ -20,14 +20,14 @@
     <b class="alert" *ngIf="!Formularz.controls['idStudenta'].valid && Formularz.controls['idStudenta'].touched">
         Musisz wybrać studenta</b><br>
 
-    Data wypozyczenia: <input formControlName="dataW" type="date" name="dataW" [(ngModel)]="noweWypozyczenie.dataWypozyczenia"
-    [ngClass]="{'in-valid': !Formularz.controls['dataW'].valid && Formularz.controls['dataW'].touched}"/>
-    <b class="alert" *ngIf="!Formularz.controls['dataW'].valid && Formularz.controls['dataW'].touched">
+    Data wypozyczenia: <input formControlName="dataWypozyczenia" type="date" name="dataWypozyczenia" [(ngModel)]="noweWypozyczenie.dataWypozyczenia"
+    [ngClass]="{'in-valid': !Formularz.controls['dataWypozyczenia'].valid && Formularz.controls['dataWypozyczenia'].touched}"/>
+    <b class="alert" *ngIf="!Formularz.controls['dataWypozyczenia'].valid && Formularz.controls['dataWypozyczenia'].touched">
         Podaj poprawną datę</b><br>
 
-    data do zwrotu: <input formControlName="data" type="date" name="data" [(ngModel)]="noweWypozyczenie.dataDoZwrotu"
-    [ngClass]="{'in-valid': !Formularz.controls['data'].valid && Formularz.controls['data'].touched}"/>
-    <b class="alert" *ngIf="!Formularz.controls['data'].valid && Formularz.controls['data'].touched">
+    data do zwrotu: <input formControlName="dataDoZwrotu" type="date" name="dataDoZwrotu" [(ngModel)]="noweWypozyczenie.dataDoZwrotu"
+    [ngClass]="{'in-valid': !Formularz.controls['dataDoZwrotu'].valid && Formularz.controls['dataDoZwrotu'].touched}"/>
+    <b class="alert" *ngIf="!Formularz.controls['dataDoZwrotu'].valid && Formularz.controls['dataDoZwrotu'].touched">
         Podaj poprawną datę</b><br>
         
     <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
