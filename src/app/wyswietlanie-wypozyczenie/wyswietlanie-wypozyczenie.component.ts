@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Wypozyczenie } from '../models/wypozyczenie';
+import {Component, OnInit} from '@angular/core';
+import {Wypozyczenie} from '../models/wypozyczenie';
 
 @Component({
   selector: 'app-wyswietlanie-wypozyczenie',
@@ -8,10 +8,11 @@ import { Wypozyczenie } from '../models/wypozyczenie';
 })
 export class WyswietlanieWypozyczenieComponent implements OnInit {
 
-  wypozyczenia: Wypozyczenie[]=[];
+  wypozyczenia: Wypozyczenie[] = [];
   wybraneWypozyczenie: Wypozyczenie;
+  edit: boolean
 
-  constructor() { 
+  constructor() {
 
   }
 
@@ -23,29 +24,33 @@ export class WyswietlanieWypozyczenieComponent implements OnInit {
       })
     })
   }
+
   onSelectW(wypozyczenie: Wypozyczenie): void {
     this.wybraneWypozyczenie = wypozyczenie;
   }
 
-  usuwanieWypozyczenie(id : number)
-  {
+  editClicked(){
+    this.edit = !this.edit;
+    console.log(this.edit)
+  }
+
+  usuwanieWypozyczenie(id: number) {
     alert("Usunieto wypozyczenie: " + "\nID: " + id)
-   for(let i=0; i<this.wypozyczenia.length; i++)
-{
-      if(id==this.wypozyczenia[i].id)
-      {
+    for (let i = 0; i < this.wypozyczenia.length; i++) {
+      if (id == this.wypozyczenia[i].id) {
         fetch("http://localhost:3000/wypozyczenie/" + id, {
           method: "delete",
           headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
           }
         }).then((res) => {
           res.json().then(data => {
-          console.log("Successful " + data);
+            console.log("Successful " + data);
           })
         })
-      } 
-  }}
+      }
+    }
+  }
 
 }

@@ -17,7 +17,8 @@
 
        <br>
        <button type="button" class="btn btn-warning" style="margin: 5px;" (click)="usuwanieWypozyczenie(wybraneWypozyczenie.id)">USUN</button>
-       <button type="button" class="btn btn-warning">EDYTUJ</button>
+       <button type="button" class="btn btn-warning" (click)="editClicked()">EDYTUJ</button>
+         <app-edycja-wypozyczenie *ngIf="edit == true" [edytowaneWypozyczenie]="wybraneWypozyczenie"></app-edycja-wypozyczenie>
     </div></div>
  </div>
  <br>
@@ -27,4 +28,3 @@
 <app-dodawanie-wypozyczenia></app-dodawanie-wypozyczenia>
 
      </div>
- 
