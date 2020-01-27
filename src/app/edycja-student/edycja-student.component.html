@@ -1,4 +1,4 @@
-<p>Dodaj studenta:</p>
+<p>Edytuj studenta:</p>
 
 <form [formGroup]="Formularz" (ngSubmit)="edytujStudenta()">
   Imie: <input formControlName="imie" type="text" name="imie" [(ngModel)]="edytowanyStudent.imie"
@@ -21,5 +21,5 @@
   <b class="alert" *ngIf="!Formularz.controls['pesel'].valid && Formularz.controls['pesel'].touched">
     Podaj 11-cyfrowy PESEL</b><br>
 
-  <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
+  <input [disabled]="!Formularz.valid" type="submit" value="Zatwierdź">
 </form>

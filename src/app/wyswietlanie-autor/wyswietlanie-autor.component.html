@@ -1,20 +1,23 @@
-<div >
+<div>
   <div class="col-3" id="left"><br>
-    <ul class="Autor list-group" >
-      <li class="list-group-item list-group-item-warning " *ngFor="let autor of autorzy" [class.selected]="autor === wybranyAutor" (click)="onSelectA(autor)">
+    <ul class="Autor list-group">
+      <li class="list-group-item list-group-item-warning " *ngFor="let autor of autorzy"
+          [class.selected]="autor === wybranyAutor" (click)="onSelectA(autor)">
         <button> {{autor.imie}} {{autor.nazwisko}} </button>
       </li>
     </ul>
   </div>
   <div class="col-3" id="right"><br>
-    <div  *ngIf="wybranyAutor" >
+    <div *ngIf="wybranyAutor">
       <h1>Szczegóły:</h1>
       ID: {{wybranyAutor.id}} <br>
       Imie: {{wybranyAutor.imie}} <br>
       Nazwisko: {{wybranyAutor.nazwisko}} <br>
       <br>
-       <button type="button" class="btn btn-warning" style="margin: 5px;" (click)="usuwanieAutor(wybranyAutor.id)">USUN</button>
-       <button type="button" class="btn btn-warning">EDYTUJ</button>
+      <button type="button" class="btn btn-warning" style="margin: 5px;" (click)="usuwanieAutor(wybranyAutor.id)">USUN
+      </button>
+      <button type="button" class="btn btn-warning" (click)="editClicked()">EDYTUJ</button>
+      <app-edycja-autor *ngIf="edit == true" [edytowanyAutor]="wybranyAutor"></app-edycja-autor>
     </div>
   </div>
 </div>

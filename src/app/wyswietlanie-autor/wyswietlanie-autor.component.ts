@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Autor} from "../models/autor";
 
 @Component({
@@ -10,8 +10,10 @@ export class WyswietlanieAutorComponent implements OnInit {
 
   autorzy: Autor[] = []
   wybranyAutor: Autor
+  edit: boolean
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     var resAutor = fetch("http://localhost:3000/autor");
@@ -25,24 +27,27 @@ export class WyswietlanieAutorComponent implements OnInit {
   onSelectA(autor: Autor): void {
     this.wybranyAutor = autor;
   }
-  usuwanieAutor(id : number)
-  {
+
+  editClicked() {
+    this.edit = !this.edit
+  }
+
+  usuwanieAutor(id: number) {
     alert("Usunieto autora: " + "\nID: " + id)
-       for(let i=0; i<this.autorzy.length; i++)
-{
-      if(id==this.autorzy[i].id)
-      {
+    for (let i = 0; i < this.autorzy.length; i++) {
+      if (id == this.autorzy[i].id) {
         fetch("http://localhost:3000/autor/" + id, {
           method: "delete",
           headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
           }
         }).then((res) => {
           res.json().then(data => {
-          console.log("Successful " + data);
+            console.log("Successful " + data);
           })
         })
-      } 
-  }}
+      }
+    }
+  }
 }

@@ -15,6 +15,7 @@ import { WyswietlanieStudentComponent } from './wyswietlanie-student/wyswietlani
 import { WyswietlanieAutorComponent } from './wyswietlanie-autor/wyswietlanie-autor.component';
 import { WyswietlanieWypozyczenieComponent } from './wyswietlanie-wypozyczenie/wyswietlanie-wypozyczenie.component';
 import { EdycjaStudentComponent } from './edycja-student/edycja-student.component';
+import { EdycjaAutorComponent } from './edycja-autor/edycja-autor.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { EdycjaStudentComponent } from './edycja-student/edycja-student.componen
     WyswietlanieAutorComponent,
     WyswietlanieWypozyczenieComponent,
     EdycjaStudentComponent,
+    EdycjaAutorComponent,
     
     
   ],
