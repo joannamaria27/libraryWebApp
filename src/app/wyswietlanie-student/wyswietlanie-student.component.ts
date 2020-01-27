@@ -28,7 +28,7 @@ export class WyswietlanieStudentComponent implements OnInit {
   }
   usuwanieStudent(id : number)
   {
-    console.log(id);
+    alert("Usunieto studenta: " + "\nID: " + id)
    for(let i=0; i<this.studenci.length; i++)
 {
       if(id==this.studenci[i].id)

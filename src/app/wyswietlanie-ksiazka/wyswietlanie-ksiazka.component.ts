@@ -27,7 +27,7 @@ export class WyswietlanieKsiazkaComponent implements OnInit {
   }
   usuwanieKsiazka(id : number)
   {
-    console.log(id);
+    alert("Usunieto ksiazke: " + "\nID: " + id)
    for(let i=0; i<this.ksiazki.length; i++)
 {
       if(id==this.ksiazki[i].id)

@@ -105,13 +105,6 @@
       "nazwisko": "Sienkiewiczowski",
       "dataUrodzenia": "1995-06-26",
       "pesel": 95062600000
-    },
-    {
-      "imie": "a",
-      "nazwisko": "a",
-      "dataUrodzenia": "2020-01-15",
-      "pesel": "11011211111",
-      "id": 5
     }
   ]
 }

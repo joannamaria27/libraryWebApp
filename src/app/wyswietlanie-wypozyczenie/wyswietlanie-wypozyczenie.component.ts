@@ -29,7 +29,7 @@ export class WyswietlanieWypozyczenieComponent implements OnInit {
 
   usuwanieWypozyczenie(id : number)
   {
-    console.log(id);
+    alert("Usunieto wypozyczenie: " + "\nID: " + id)
    for(let i=0; i<this.wypozyczenia.length; i++)
 {
       if(id==this.wypozyczenia[i].id)

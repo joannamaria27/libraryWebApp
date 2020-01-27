@@ -27,8 +27,8 @@ export class WyswietlanieAutorComponent implements OnInit {
   }
   usuwanieAutor(id : number)
   {
-    console.log(id);
-   for(let i=0; i<this.autorzy.length; i++)
+    alert("Usunieto autora: " + "\nID: " + id)
+       for(let i=0; i<this.autorzy.length; i++)
 {
       if(id==this.autorzy[i].id)
       {
