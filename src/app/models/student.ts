@@ -1,7 +1,7 @@
 import { Ksiazka } from './ksiazka';
 
 export interface IStudent {
-      studentId: number;
+      id: number;
       imie: String;
       nazwisko: String;
       dataUrodzenia: Date;
@@ -10,7 +10,7 @@ export interface IStudent {
     }
     
   export class Student implements IStudent {
-      studentId: number;
+      id: number;
       imie: String;
       nazwisko: String;
       dataUrodzenia: Date;
@@ -18,7 +18,7 @@ export interface IStudent {
 
 
       constructor(obj = {} as Student) {
-          this.studentId = obj.studentId;
+          this.id = obj.id;
           this.imie = obj.imie;
           this.nazwisko = obj.nazwisko;
           this.dataUrodzenia = obj.dataUrodzenia;

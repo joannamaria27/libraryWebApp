@@ -2,7 +2,7 @@ import { Autor } from './autor';
 
 
 export interface IWypozyczenie {
-  wypozyczenieId: number;
+  id: number;
   idKsiazki: number;
   idStudenta: number;
   dataWypozyczenia: Date;
@@ -10,7 +10,7 @@ export interface IWypozyczenie {
 }
 
 export class Wypozyczenie implements IWypozyczenie {
-    wypozyczenieId: number;
+    id: number;
     idKsiazki: number;
     idStudenta: number;
     dataWypozyczenia: Date;
@@ -18,7 +18,7 @@ export class Wypozyczenie implements IWypozyczenie {
 
 
     constructor(obj = {} as Wypozyczenie) {
-        this.wypozyczenieId = obj.wypozyczenieId;
+        this.id = obj.id;
         this.idKsiazki = obj.idKsiazki;
         this.idStudenta = obj.idStudenta;
         this.dataWypozyczenia = obj.dataWypozyczenia;

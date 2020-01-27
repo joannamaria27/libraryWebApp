@@ -2,7 +2,7 @@ import { Autor } from './autor';
 
 
 export interface IKsiazka {
-  ksiazkaId: number;
+  id: number;
   tytul: String;
   liczbaStron: number;
   isbn: number;
@@ -11,7 +11,7 @@ export interface IKsiazka {
 }
 
 export class Ksiazka implements IKsiazka {
-    ksiazkaId: number;
+    id: number;
     tytul: String;
     liczbaStron: number;
     isbn: number;
@@ -19,7 +19,7 @@ export class Ksiazka implements IKsiazka {
     autorId: number;
 
     constructor(obj = {} as Ksiazka) {
-        this.ksiazkaId = obj.ksiazkaId;
+        this.id = obj.id;
         this.tytul = obj.tytul;
         this.liczbaStron = obj.liczbaStron;
         this.isbn = obj.isbn;

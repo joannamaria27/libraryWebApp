@@ -20,6 +20,13 @@
       "dataWypozyczenia": "2020-01-23",
       "dataDoZwrotu": "2020-01-15",
       "id": 2
+    },
+    {
+      "idKsiazki": "1",
+      "idStudenta": "0",
+      "dataWypozyczenia": "2020-01-15",
+      "dataDoZwrotu": "2020-01-01",
+      "id": 3
     }
   ],
   "autor": [
@@ -110,6 +117,13 @@
       "nazwisko": "Sienkiewiczowski",
       "dataUrodzenia": "1995-06-26",
       "pesel": 95062600000
+    },
+    {
+      "imie": "a",
+      "nazwisko": "a",
+      "dataUrodzenia": "2020-01-15",
+      "pesel": "11011211111",
+      "id": 5
     }
   ]
 }
