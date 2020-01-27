@@ -63,11 +63,11 @@
     },
     {
       "id": 2,
-      "isbn": 1234567890003,
-      "tytul": "Powieść historyczna",
-      "liczbaStron": 1500,
-      "dataWydania": "2002-02-01",
-      "autorId": 2
+      "isbn": 134567890002,
+      "tytul": "Pan Tadeusz",
+      "liczbaStron": 1226,
+      "dataWydania": "2020-01-30",
+      "autorId": "3"
     }
   ],
   "student": [

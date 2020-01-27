@@ -1,35 +1,34 @@
-<p>edycja ksiazka:</p>
+<p>Edycja książki:</p>
 
 <form [formGroup]="Formularz" (ngSubmit)="wyslijFormularz()">
 
-    Tytul: <input formControlName="tytul" type="text" name="tytul" [(ngModel)]="nowaKsiazka.tytul"
+    Tytul: <input formControlName="tytul" type="text" name="tytul" [(ngModel)]="edytowanaKsiazka.tytul"
     [ngClass]="{'in-valid': !Formularz.controls['tytul'].valid && Formularz.controls['tytul'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['tytul'].valid && Formularz.controls['tytul'].touched">
         Musisz podać tytuł</b><br>
-  
-    Autor: <select formControlName="idAutora" type="number" name="idAutora" [(ngModel)]="nowaKsiazka.idAutora"
+
+    Autor: <select formControlName="idAutora" type="number" name="idAutora" [(ngModel)]="edytowanaKsiazka.autorId"
     [ngClass]="{'in-valid': !Formularz.controls['idAutora'].valid && Formularz.controls['idAutora'].touched}">
-  
+
       <option *ngFor="let autor of autorzyBD" [value]="autor.id">{{autor.imie + ' ' + autor.nazwisko}}</option>
     </select>
     <b class="alert" *ngIf="!Formularz.controls['idAutora'].valid && Formularz.controls['idAutora'].touched">
         Musisz wybrać autora</b><br>
-  
-    Liczba stron: <input formControlName="liczbaStron" type="number" name="liczbaStron" [(ngModel)]="nowaKsiazka.liczbaStron"
+
+    Liczba stron: <input formControlName="liczbaStron" type="number" name="liczbaStron" [(ngModel)]="edytowanaKsiazka.liczbaStron"
     [ngClass]="{'in-valid': !Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched}"/>
-    <b class="alert" *ngIf="!Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched">
+    <b class="alert" *ngIf="!Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched" [(ngModel)]="edytowanaKsiazka.liczbaStron">
         Podaj poprawną datę</b><br>
-  
-    ISBN: <input formControlName="isbn" type="number" name="isbn" [(ngModel)]="nowaKsiazka.isbn"
+
+    ISBN: <input formControlName="isbn" type="number" name="isbn" [(ngModel)]="edytowanaKsiazka.isbn"
     [ngClass]="{'in-valid': !Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched">
         Podaj 13-cyfrowy ISBN</b><br>
-  
-    Data wydania: <input formControlName="dataWydania" type="date" name="dataWydania" [(ngModel)]="nowaKsiazka.dataWydania"
+
+    Data wydania: <input formControlName="dataWydania" type="date" name="dataWydania" [(ngModel)]="edytowanaKsiazka.dataWydania"
     [ngClass]="{'in-valid': !Formularz.controls['dataWydania'].valid && Formularz.controls['dataWydania'].touched}"/>
     <b class="alert" *ngIf="!Formularz.controls['dataWydania'].valid && Formularz.controls['dataWydania'].touched">
         Podaj poprawną datę</b><br>
-  
-    <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
+
+    <input [disabled]="!Formularz.valid" type="submit" value="Zatwierdź">
   </form>
-  

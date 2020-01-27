@@ -8,7 +8,7 @@
   <b class="alert" *ngIf="!Formularz.controls['tytul'].valid && Formularz.controls['tytul'].touched">
       Musisz podać tytuł</b><br>
 
-  Autor: <select formControlName="idAutora" type="number" name="idAutora" [(ngModel)]="nowaKsiazka.idAutora"
+  Autor: <select formControlName="idAutora" type="number" name="idAutora" [(ngModel)]="nowaKsiazka.autorId"
   [ngClass]="{'in-valid': !Formularz.controls['idAutora'].valid && Formularz.controls['idAutora'].touched}">
 
     <option *ngFor="let autor of autorzyBD" [value]="autor.id">{{autor.imie + ' ' + autor.nazwisko}}</option>
