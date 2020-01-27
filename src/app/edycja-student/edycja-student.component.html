@@ -1,0 +1,25 @@
+<p>Dodaj studenta:</p>
+
+<form [formGroup]="Formularz" (ngSubmit)="edytujStudenta()">
+  Imie: <input formControlName="imie" type="text" name="imie" [(ngModel)]="edytowanyStudent.imie"
+               [ngClass]="{'in-valid': !Formularz.controls['imie'].valid && Formularz.controls['imie'].touched}"/>
+  <b class="alert" *ngIf="!Formularz.controls['imie'].valid && Formularz.controls['imie'].touched">
+    Musisz podać imię</b><br>
+
+  Nazwisko: <input formControlName="nazwisko" type="text" name="nazwisko" [(ngModel)]="edytowanyStudent.nazwisko"
+                   [ngClass]="{'in-valid': !Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched}"/>
+  <b class="alert" *ngIf="!Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched">
+    Musisz podać nazwisko</b><br>
+
+  Data urodzenia: <input formControlName="data" type="date" name="data" [(ngModel)]="edytowanyStudent.dataUrodzenia"
+                         [ngClass]="{'in-valid': !Formularz.controls['data'].valid && Formularz.controls['data'].touched}"/>
+  <b class="alert" *ngIf="!Formularz.controls['data'].valid && Formularz.controls['data'].touched">
+    Podaj poprawną datę</b><br>
+
+  PESEL: <input formControlName="pesel" type="nmber" name="pesel" [(ngModel)]="edytowanyStudent.pesel"
+                [ngClass]="{'in-valid': !Formularz.controls['pesel'].valid && Formularz.controls['pesel'].touched}"/>
+  <b class="alert" *ngIf="!Formularz.controls['pesel'].valid && Formularz.controls['pesel'].touched">
+    Podaj 11-cyfrowy PESEL</b><br>
+
+  <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
+</form>

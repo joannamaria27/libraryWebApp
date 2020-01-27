@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Student } from "../models/student";
+import {Component, OnInit} from '@angular/core';
+import {Student} from "../models/student";
 import {Ksiazka} from "../models/ksiazka";
 
 @Component({
@@ -11,8 +11,10 @@ export class WyswietlanieStudentComponent implements OnInit {
 
   studenci: Student[] = []
   student: Student;
+  edit: boolean;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     var resStudent = fetch("http://localhost:3000/student");
@@ -26,25 +28,28 @@ export class WyswietlanieStudentComponent implements OnInit {
   onSelectS(student: Student): void {
     this.student = student;
   }
-  usuwanieStudent(id : number)
-  {
+
+  editClicked() {
+    this.edit = !this.edit
+  }
+
+  usuwanieStudent(id: number) {
     alert("Usunieto studenta: " + "\nID: " + id)
-   for(let i=0; i<this.studenci.length; i++)
-{
-      if(id==this.studenci[i].id)
-      {
+    for (let i = 0; i < this.studenci.length; i++) {
+      if (id == this.studenci[i].id) {
         fetch("http://localhost:3000/student/" + id, {
           method: "delete",
           headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
           }
         }).then((res) => {
           res.json().then(data => {
-          console.log("Successful " + data);
+            console.log("Successful " + data);
           })
         })
-      } 
-  }}
+      }
+    }
+  }
 
 }

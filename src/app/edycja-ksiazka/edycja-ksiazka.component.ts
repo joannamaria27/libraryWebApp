@@ -9,12 +9,9 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./edycja-ksiazka.component.css']
 })
 export class EdycjaKsiazkaComponent implements OnInit {
-  // @Input() edytowanaKsiazka:
 
-// @Output() edytujKsiazke: EventEmitter<Ksiazka> = new EventEmitter();
   @Input() edytowanaKsiazka: Ksiazka;
   autorzyBD: Autor[] = new Array<Autor>();
-  staraKsiazka: Ksiazka;
   Formularz: FormGroup
 
   constructor(private fb: FormBuilder) {
@@ -40,13 +37,9 @@ export class EdycjaKsiazkaComponent implements OnInit {
         this.autorzyBD = data as Autor[];
       })
     })
-    console.log("tu ")
-    console.log(this.edytowanaKsiazka)
   }
 
   edytujKsiazke(id: number) {
-    console.log("tu ")
-    console.log(this.edytowanaKsiazka)
     // this.edytujKsiazke.emit(this.staraKsiazka);
     alert("Zedytowano ksiazke: " + "\nTytul: " + this.edytowanaKsiazka.tytul);
 
@@ -62,9 +55,6 @@ export class EdycjaKsiazkaComponent implements OnInit {
         console.log("Successful " + data);
       })
     })
-
-    console.log("tu ")
-    console.log(this.edytowanaKsiazka)
   }
 
   wyslijFormularz() {

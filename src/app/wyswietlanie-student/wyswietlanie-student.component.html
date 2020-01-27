@@ -17,8 +17,10 @@
       PESEL: {{student.pesel}} <br>
 
       <br>
-      <button type="button" class="btn btn-warning" style="margin: 5px;" (click)="usuwanieStudent(student.id)">USUN</button>
-       <button type="button" class="btn btn-warning">EDYTUJ</button>
+      <button type="button" class="btn btn-warning" style="margin: 5px;" (click)="usuwanieStudent(student.id)">USUN
+      </button>
+      <button type="button" class="btn btn-warning" (click)="editClicked()">EDYTUJ</button>
+      <app-edycja-student *ngIf="edit == true" [edytowanyStudent]="student"></app-edycja-student>
     </div>
   </div>
 </div>
