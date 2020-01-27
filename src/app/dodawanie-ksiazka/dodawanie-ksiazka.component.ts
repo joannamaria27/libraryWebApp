@@ -38,7 +38,7 @@ export class DodawanieKsiazkaComponent implements OnInit {
 
   wyslijFormularz() {
     this.dodajKsiazke.emit(this.nowaKsiazka);
-    alert("Dodano ksiazke: " + "\nImie: " + this.nowaKsiazka.tytul )
+    alert("Dodano ksiazke: " + "\nTytul: " + this.nowaKsiazka.tytul )
 
     fetch("http://localhost:3000/ksiazka/", {
       method: "post",
