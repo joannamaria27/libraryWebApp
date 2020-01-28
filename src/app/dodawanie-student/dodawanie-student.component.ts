@@ -18,7 +18,7 @@ export class DodawanieStudentComponent implements OnInit {
     'imie': [null, Validators.required],
     'nazwisko' : [null, Validators.required],
     'data' : [null, Validators.required],
-    'pesel' : [null, Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11)])],
+    'pesel' : [null, Validators.compose([Validators.required, Validators.minLength(11), Validators.maxLength(11), Validators.pattern(/^-?(0|[1-9]\d*)?$/)])],
     });
   }
   wyslijFormularz() {

@@ -21,8 +21,8 @@ export class DodawanieKsiazkaComponent implements OnInit {
     this.Formularz = fb.group({
     'tytul': [null, Validators.required],
     'idAutora' : [null, Validators.required],
-    'liczbaStron' : [null, Validators.required],
-    'isbn' : [null, Validators.compose([Validators.required, Validators.minLength(13), Validators.maxLength(13)])],
+    'liczbaStron' : [null, Validators.compose([Validators.required, Validators.min(1)])],
+    'isbn' : [null, Validators.compose([Validators.required, Validators.minLength(13), Validators.maxLength(13), Validators.pattern(/^-?(0|[1-9]\d*)?$/)])],
     'dataWydania' : [null, Validators.required]
     });
   }

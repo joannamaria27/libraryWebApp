@@ -3,7 +3,7 @@
       <ul class="Wypozyczenie list-group">
          <li class="list-group-item list-group-item-warning " *ngFor="let wypozyczenie of wypozyczenia"
             [class.selected]="wypozyczenie === wybraneWypozyczenie" (click)="onSelectW(wypozyczenie)">
-            <button> {{wypozyczenie.id}} </button>
+            <button> {{wypozyczenie.id + ". ksiazka o id: " +wypozyczenie.idKsiazki + " student o id: "+wypozyczenie.idStudenta}} </button>
          </li>
       </ul>
    </div>

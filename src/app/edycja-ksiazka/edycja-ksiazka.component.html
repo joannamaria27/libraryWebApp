@@ -23,12 +23,13 @@
         [ngClass]="{'in-valid': !Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched}" />
     <b class="alert" *ngIf="!Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched"
         [(ngModel)]="edytowanaKsiazka.liczbaStron">
-        Podaj poprawną datę</b><br>
+        Podaj poprawną ilosc</b><br>
 
     ISBN: <input class="form-control" formControlName="isbn" type="number" name="isbn"
         [(ngModel)]="edytowanaKsiazka.isbn"
         [ngClass]="{'in-valid': !Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched}" />
-    <b class="alert" *ngIf="!Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched">
+    <b class="alert" *ngIf="!Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched"
+    [(ngModel)]="edytowanaKsiazka.isbn">
         Podaj 13-cyfrowy ISBN</b><br>
 
     Data wydania: <input class="form-control" formControlName="dataWydania" type="date" name="dataWydania"

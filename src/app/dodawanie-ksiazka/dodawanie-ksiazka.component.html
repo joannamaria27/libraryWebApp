@@ -22,7 +22,7 @@
         [(ngModel)]="nowaKsiazka.liczbaStron"
         [ngClass]="{'in-valid': !Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched}" />
     <b class="alert" *ngIf="!Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched">
-        Podaj poprawną datę</b><br>
+        Podaj poprawną ilosc</b><br>
 
     ISBN: 
     <input class="form-control" formControlName="isbn" type="nmber" name="isbn" [(ngModel)]="nowaKsiazka.isbn"
