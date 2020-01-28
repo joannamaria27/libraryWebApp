@@ -44,7 +44,7 @@ export class DodawanieWypozyczeniaComponent implements OnInit {
 
   wyslijFormularz() {
     this.dodajWypozyczenie.emit(this.noweWypozyczenie);
-    alert("Dodano wypozyczenie: " + "\nStudent: " + this.noweWypozyczenie.idStudenta + "Ksizka: " + this.noweWypozyczenie.idKsiazki);
+    alert("Dodano wypozyczenie: " + "\nStudent: " + this.noweWypozyczenie.idStudenta + "Ksiązka: " + this.noweWypozyczenie.idKsiazki);
     fetch("http://localhost:3000/wypozyczenie/", {
       method: "post",
       headers: {
