@@ -1,51 +1,41 @@
-<p>Dodaj książkę:</p>
-
 
 <form [formGroup]="Formularz" (ngSubmit)="wyslijFormularz()">
 
-  Tytul: <input formControlName="tytul" type="text" name="tytul" [(ngModel)]="nowaKsiazka.tytul"
-  [ngClass]="{'in-valid': !Formularz.controls['tytul'].valid && Formularz.controls['tytul'].touched}"/>
-  <b class="alert" *ngIf="!Formularz.controls['tytul'].valid && Formularz.controls['tytul'].touched">
-      Musisz podać tytuł</b><br>
+    Tytul: 
+    <input class="form-control" formControlName="tytul" type="text" name="tytul" [(ngModel)]="nowaKsiazka.tytul"
+        [ngClass]="{'in-valid': !Formularz.controls['tytul'].valid && Formularz.controls['tytul'].touched}" />
+    <b class="alert" *ngIf="!Formularz.controls['tytul'].valid && Formularz.controls['tytul'].touched">
+        Musisz podać tytuł</b><br>
 
-  Autor: <select formControlName="idAutora" type="number" name="idAutora" [(ngModel)]="nowaKsiazka.autorId"
-  [ngClass]="{'in-valid': !Formularz.controls['idAutora'].valid && Formularz.controls['idAutora'].touched}">
+    Autor: 
+    <select class="form-control" formControlName="idAutora" type="number" name="idAutora"
+        [(ngModel)]="nowaKsiazka.autorId"
+        [ngClass]="{'in-valid': !Formularz.controls['idAutora'].valid && Formularz.controls['idAutora'].touched}">
 
-    <option *ngFor="let autor of autorzyBD" [value]="autor.id">{{autor.imie + ' ' + autor.nazwisko}}</option>
-  </select>
-  <b class="alert" *ngIf="!Formularz.controls['idAutora'].valid && Formularz.controls['idAutora'].touched">
-      Musisz wybrać autora</b><br>
+        <option *ngFor="let autor of autorzyBD" [value]="autor.id">{{autor.imie + ' ' + autor.nazwisko}}</option>
+    </select>
+    <b class="alert" *ngIf="!Formularz.controls['idAutora'].valid && Formularz.controls['idAutora'].touched">
+        Musisz wybrać autora</b><br>
 
-  Liczba stron: <input formControlName="liczbaStron" type="number" name="liczbaStron" [(ngModel)]="nowaKsiazka.liczbaStron"
-  [ngClass]="{'in-valid': !Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched}"/>
-  <b class="alert" *ngIf="!Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched">
-      Podaj poprawną datę</b><br>
+    Liczba stron: 
+    <input class="form-control" formControlName="liczbaStron" type="number" name="liczbaStron"
+        [(ngModel)]="nowaKsiazka.liczbaStron"
+        [ngClass]="{'in-valid': !Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched}" />
+    <b class="alert" *ngIf="!Formularz.controls['liczbaStron'].valid && Formularz.controls['liczbaStron'].touched">
+        Podaj poprawną datę</b><br>
 
-  ISBN: <input formControlName="isbn" type="nmber" name="isbn" [(ngModel)]="nowaKsiazka.isbn"
-  [ngClass]="{'in-valid': !Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched}"/>
-  <b class="alert" *ngIf="!Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched">
-      Podaj 13-cyfrowy ISBN</b><br>
+    ISBN: 
+    <input class="form-control" formControlName="isbn" type="nmber" name="isbn" [(ngModel)]="nowaKsiazka.isbn"
+        [ngClass]="{'in-valid': !Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched}" />
+    <b class="alert" *ngIf="!Formularz.controls['isbn'].valid && Formularz.controls['isbn'].touched">
+        Podaj 13-cyfrowy ISBN</b><br>
 
-  Data wydania: <input formControlName="dataWydania" type="date" name="dataWydania" [(ngModel)]="nowaKsiazka.dataWydania"
-  [ngClass]="{'in-valid': !Formularz.controls['dataWydania'].valid && Formularz.controls['dataWydania'].touched}"/>
-  <b class="alert" *ngIf="!Formularz.controls['dataWydania'].valid && Formularz.controls['dataWydania'].touched">
-      Podaj poprawną datę</b><br>
+    Data wydania: 
+    <input class="form-control" formControlName="dataWydania" type="date" name="dataWydania"
+        [(ngModel)]="nowaKsiazka.dataWydania"
+        [ngClass]="{'in-valid': !Formularz.controls['dataWydania'].valid && Formularz.controls['dataWydania'].touched}" />
+    <b class="alert" *ngIf="!Formularz.controls['dataWydania'].valid && Formularz.controls['dataWydania'].touched">
+        Podaj poprawną datę</b><br>
 
-  <input [disabled]="!Formularz.valid" type="submit" value="Dodaj">
+    <input class="btn btn-warning" [disabled]="!Formularz.valid" type="submit" value="Dodaj">
 </form>
-
-
-<!-- <p>Simple datepicker</p>
-
-<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
-
-<hr/>
-
-<button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
-<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
-<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
-
-<hr/>
-
-<pre>Month: {{ date.month }}.{{ date.year }}</pre>
-<pre>Model: {{ model | json }}</pre> -->

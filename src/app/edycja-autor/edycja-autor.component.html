@@ -1,17 +1,20 @@
-<br><p>Edytuj autora:</p>
+<br>
+<h1>Edytuj autora:</h1>
 
 <form [formGroup]="Formularz" (ngSubmit)="edytujAutora()">
-  Imie:
-  <input formControlName="imie" type="text" name="imie" [(ngModel)]="edytowanyAutor.imie"
-         [ngClass]="{'in-valid': !Formularz.controls['imie'].valid && Formularz.controls['imie'].touched}"/>
-  <b class="alert" *ngIf="!Formularz.controls['imie'].valid && Formularz.controls['imie'].touched">Musisz podać imię</b><br>
+       Imie:
+       <input class="form-control" formControlName="imie" type="text" name="imie" [(ngModel)]="edytowanyAutor.imie"
+              [ngClass]="{'in-valid': !Formularz.controls['imie'].valid && Formularz.controls['imie'].touched}" />
+       <b class="alert" *ngIf="!Formularz.controls['imie'].valid && Formularz.controls['imie'].touched">Musisz podać
+              imię</b><br>
 
-  Nazwisko:
-  <input formControlName="nazwisko" type="text" name="nazwisko" [(ngModel)]="edytowanyAutor.nazwisko"
-         [ngClass]="{'in-valid': !Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched}"/>
-  <b class="alert" *ngIf="!Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched">Musisz podać nazwisko</b><br>
+       Nazwisko:
+       <input class="form-control" formControlName="nazwisko" type="text" name="nazwisko"
+              [(ngModel)]="edytowanyAutor.nazwisko"
+              [ngClass]="{'in-valid': !Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched}" />
+       <b class="alert" *ngIf="!Formularz.controls['nazwisko'].valid && Formularz.controls['nazwisko'].touched">Musisz
+              podać nazwisko</b><br>
 
-  <input [disabled]="!Formularz.valid" type="submit" value="Zatwierdź">
+       <input class="btn btn-warning" [disabled]="!Formularz.valid" type="submit" value="Zatwierdź">
 
 </form>
-

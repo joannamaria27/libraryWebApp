@@ -1,33 +1,39 @@
-<p>Edytuj wypozyczenie:</p>
-
+<br>
+<h1>Edytuj wypozyczenie:</h1>
+<!-- <br> -->
 <form [formGroup]="Formularz" (ngSubmit)="wyslijFormularz()">
 
-  id ksiazki: <select formControlName="idKsiazki" type="number" name="idKsiazki" [(ngModel)]="edytowaneWypozyczenie.idKsiazki"
-                      [ngClass]="{'in-valid': !Formularz.controls['idKsiazki'].valid && Formularz.controls['idKsiazki'].touched}">
+  id ksiazki: <select class="form-control" formControlName="idKsiazki" type="number" name="idKsiazki"
+    [(ngModel)]="edytowaneWypozyczenie.idKsiazki"
+    [ngClass]="{'in-valid': !Formularz.controls['idKsiazki'].valid && Formularz.controls['idKsiazki'].touched}">
 
-  <option *ngFor="let ksiazka of ksiazkaDB" [value]="ksiazka.id">{{ksiazka.tytul}}</option>
-</select>
+    <option *ngFor="let ksiazka of ksiazkaDB" [value]="ksiazka.id">{{ksiazka.tytul}}</option>
+  </select>
   <b class="alert" *ngIf="!Formularz.controls['idKsiazki'].valid && Formularz.controls['idKsiazki'].touched">
     Musisz wybrać ksiazke</b><br>
 
 
-  id studenta: <select formControlName="idStudenta" type="number" name="idStudenta" [(ngModel)]="edytowaneWypozyczenie.idStudenta"
-                       [ngClass]="{'in-valid': !Formularz.controls['idStudenta'].valid && Formularz.controls['idStudenta'].touched}">
+  id studenta: <select class="form-control" formControlName="idStudenta" type="number" name="idStudenta"
+    [(ngModel)]="edytowaneWypozyczenie.idStudenta"
+    [ngClass]="{'in-valid': !Formularz.controls['idStudenta'].valid && Formularz.controls['idStudenta'].touched}">
 
-  <option *ngFor="let student of studentDB" [value]="student.id">{{student.nazwisko +" " + student.imie}}</option>
-</select>
+    <option *ngFor="let student of studentDB" [value]="student.id">{{student.nazwisko +" " + student.imie}}</option>
+  </select>
   <b class="alert" *ngIf="!Formularz.controls['idStudenta'].valid && Formularz.controls['idStudenta'].touched">
     Musisz wybrać studenta</b><br>
 
-  Data wypozyczenia: <input formControlName="dataWypozyczenia" type="date" name="dataWypozyczenia" [(ngModel)]="edytowaneWypozyczenie.dataWypozyczenia"
-                            [ngClass]="{'in-valid': !Formularz.controls['dataWypozyczenia'].valid && Formularz.controls['dataWypozyczenia'].touched}"/>
-  <b class="alert" *ngIf="!Formularz.controls['dataWypozyczenia'].valid && Formularz.controls['dataWypozyczenia'].touched">
+  Data wypozyczenia: <input class="form-control" formControlName="dataWypozyczenia" type="date" name="dataWypozyczenia"
+    [(ngModel)]="edytowaneWypozyczenie.dataWypozyczenia"
+    [ngClass]="{'in-valid': !Formularz.controls['dataWypozyczenia'].valid && Formularz.controls['dataWypozyczenia'].touched}" />
+  <b class="alert"
+    *ngIf="!Formularz.controls['dataWypozyczenia'].valid && Formularz.controls['dataWypozyczenia'].touched">
     Podaj poprawną datę</b><br>
 
-  data do zwrotu: <input formControlName="dataDoZwrotu" type="date" name="dataDoZwrotu" [(ngModel)]="edytowaneWypozyczenie.dataDoZwrotu"
-                         [ngClass]="{'in-valid': !Formularz.controls['dataDoZwrotu'].valid && Formularz.controls['dataDoZwrotu'].touched}"/>
+  data do zwrotu: <input class="form-control" formControlName="dataDoZwrotu" type="date" name="dataDoZwrotu"
+    [(ngModel)]="edytowaneWypozyczenie.dataDoZwrotu"
+    [ngClass]="{'in-valid': !Formularz.controls['dataDoZwrotu'].valid && Formularz.controls['dataDoZwrotu'].touched}" />
   <b class="alert" *ngIf="!Formularz.controls['dataDoZwrotu'].valid && Formularz.controls['dataDoZwrotu'].touched">
     Podaj poprawną datę</b><br>
 
-  <input [disabled]="!Formularz.valid" type="submit" value="Zatwierdź">
+  <input class="btn btn-warning" [disabled]="!Formularz.valid" type="submit" value="Zatwierdź">
 </form>

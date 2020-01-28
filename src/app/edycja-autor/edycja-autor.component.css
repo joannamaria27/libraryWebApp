@@ -1,0 +1,9 @@
+.in-valid{
+    border: 1px solid #ff0000;
+}
+.alert{
+    color: #ff0000;
+}
+h1{
+    text-align: center;
+  }

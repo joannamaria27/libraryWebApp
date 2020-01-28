@@ -18,17 +18,17 @@
 </div> -->
 
 <div>
-  <div class="col-3" id="left"><br>
+  <div class="col-6" id="left"><br>
     <ul class="Ksiazka list-group">
       <li class="list-group-item list-group-item-warning " *ngFor="let ksiazka of ksiazki"
-          [class.selected]="ksiazka === wybranaKsiazka" (click)="onSelectK(ksiazka)">
+        [class.selected]="ksiazka === wybranaKsiazka" (click)="onSelectK(ksiazka)">
         <button> {{ksiazka.tytul}} </button>
       </li>
     </ul>
   </div>
-  <div class="col-3" id="right"><br>
-    <div *ngIf="wybranaKsiazka">
-      <h1>Szczegóły:</h1>
+  <div class="col-2" id="right"><br>
+    <div style="padding: 10px; border-style: double; border-color:darkorange" *ngIf="wybranaKsiazka">
+      <!-- <h1>Szczegóły:</h1> -->
       ID: {{wybranaKsiazka.id}} <br>
       Tytuł: {{wybranaKsiazka.tytul}} <br>
       Liczba stron: {{wybranaKsiazka.liczbaStron}} <br>
@@ -36,16 +36,17 @@
       ISBN: {{wybranaKsiazka.isbn}} <br>
       ID autora: {{wybranaKsiazka.autorId}} <br>
       <br>
-      <button type="button" class="btn btn-warning" style="margin: 5px;" (click)="usuwanieKsiazka(wybranaKsiazka.id)">
+      <button type="button" class="btn btn-warning" style="margin: 12px;" (click)="usuwanieKsiazka(wybranaKsiazka.id)">
         USUN
       </button>
-      <button type="button" class="btn btn-warning" (click)="editClicked(wybranaKsiazka.id)">EDYTUJ</button>
-      <app-edycja-ksiazka *ngIf="edit == true" [edytowanaKsiazka]="wybranaKsiazka"></app-edycja-ksiazka>
+      <button type="button" class="btn btn-warning" (click)="editClicked(wybranaKsiazka.id)">EDYTUJ</button> <br>
     </div>
-  </div>
-</div>
+  </div></div>
+  <app-edycja-ksiazka class="col-3" id="right" *ngIf="edit == true" [edytowanaKsiazka]="wybranaKsiazka"></app-edycja-ksiazka>
+
+
 <br>
-<div class="col-3" id="enter">
+<div class="col-6" id="enter">
   <br>
   <h1>Dodaj</h1>
   <app-dodawanie-ksiazka></app-dodawanie-ksiazka>

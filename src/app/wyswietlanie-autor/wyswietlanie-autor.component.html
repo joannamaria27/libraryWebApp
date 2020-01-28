@@ -1,29 +1,30 @@
-<div>
-  <div class="col-3" id="left"><br>
+<div><div>
+  <div class="col-6" id="left"><br>
     <ul class="Autor list-group">
       <li class="list-group-item list-group-item-warning " *ngFor="let autor of autorzy"
-          [class.selected]="autor === wybranyAutor" (click)="onSelectA(autor)">
+        [class.selected]="autor === wybranyAutor" (click)="onSelectA(autor)">
         <button> {{autor.imie}} {{autor.nazwisko}} </button>
       </li>
     </ul>
   </div>
-  <div class="col-3" id="right"><br>
-    <div *ngIf="wybranyAutor">
-      <h1>Szczegóły:</h1>
+  <div class="col-2"  id="right"><br>
+    <div style="padding: 10px; border-style: double; border-color:darkorange" *ngIf="wybranyAutor">
       ID: {{wybranyAutor.id}} <br>
       Imie: {{wybranyAutor.imie}} <br>
       Nazwisko: {{wybranyAutor.nazwisko}} <br>
       <br>
-      <button type="button" class="btn btn-warning" style="margin: 5px;" (click)="usuwanieAutor(wybranyAutor.id)">USUN
+      <button type="button" class="btn btn-warning" style="margin: 12px;" (click)="usuwanieAutor(wybranyAutor.id)">USUN
       </button>
-      <button type="button" class="btn btn-warning" (click)="editClicked()">EDYTUJ</button>
-      <app-edycja-autor *ngIf="edit == true" [edytowanyAutor]="wybranyAutor"></app-edycja-autor>
+      <button type="button" class="btn btn-warning"  (click)="editClicked()">EDYTUJ</button> <br>
     </div>
-  </div>
-</div>
+  </div></div>
+  <app-edycja-autor class="col-4" id="right" *ngIf="edit == true" [edytowanyAutor]="wybranyAutor"></app-edycja-autor>
+
+
+
 <br>
-<div class="col-3" id="enter">
+<div class="col-6" id="enter">
   <br>
   <h1>Dodaj</h1>
   <app-dodawanie-autor></app-dodawanie-autor>
-</div>
+</div></div>
